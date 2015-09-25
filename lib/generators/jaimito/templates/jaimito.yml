@@ -1,0 +1,15 @@
+en:
+  jaimito:
+    translated_classes_names:
+      user: User
+    translated_attributes_names:
+      user:
+        name: Name
+
+pt-br:
+  jaimito:
+    translated_classes_names:
+      user: Usuário
+    translated_attributes_names:
+      user:
+        name: Nome
