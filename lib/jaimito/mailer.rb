@@ -35,8 +35,9 @@ module Jaimito
           mail(
             to: self.class.get_receiver_email(*args),
             subject: Jaimito::MailTemplate.subject(self.class, method, *args),
-            body: Jaimito::MailTemplate.body(self.class, method, *args)
-          )
+          ) do |format|
+            format.html{ render html: Jaimito::MailTemplate.body(self.class, method, *args) }
+          end
         end
 
         define_singleton_method method do | *args |
