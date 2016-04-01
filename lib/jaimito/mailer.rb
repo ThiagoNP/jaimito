@@ -36,7 +36,7 @@ module Jaimito
             to: self.class.get_receiver_email(*args),
             subject: Jaimito::MailTemplate.subject(self.class, method, *args),
           ) do |format|
-            format.html{ render html: Jaimito::MailTemplate.body(self.class, method, *args) }
+            format.html{ render html: Jaimito::MailTemplate.body(self.class, method, *args), layout: _layout }
           end
         end
 
@@ -52,7 +52,6 @@ module Jaimito
           end
         end
       end
-
     end
   end
 end
