@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description = ""
   s.summary     = ""
   s.authors     = ["Thiago Porto", "Hideki Matsumoto"]
-  s.homepage    = 'https://github.com/ThiagoNP/jaimito'
+  s.homepage    = 'https://github.com/Vizir/jaimito'
   s.files       = `git ls-files`.split("\n")
   s.licenses    = ["MIT license (MIT)"]
 
