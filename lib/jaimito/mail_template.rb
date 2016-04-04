@@ -34,7 +34,9 @@ module Jaimito
     def self.hash_of_attributes_and_translations(klass, class_name)
       attributes_hash = {}
       klass.attribute_names.each do |attr|
-        attributes_hash[attr.to_sym] = attr if I18n.exists?( "jaimito.translated_attributes_names.#{class_name}.#{attr}")
+        if I18n.exists?( "jaimito.translated_attributes_names.#{class_name}.#{attr}")
+          attributes_hash[attr.to_sym] = I18n.t("jaimito.translated_attributes_names.#{class_name}.#{attr}")
+        end
       end
       attributes_hash
     end
